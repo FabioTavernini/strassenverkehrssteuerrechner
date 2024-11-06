@@ -7,22 +7,10 @@
 # :house: Strassenverkehrssteuer - Rechner :dollar:
 Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen
 
-![](./docs/steuerrechner.png)
-
 # :racing_car: Funktion
 Der Steuerrechner führt alle Berechnungen zur Steuer auf Client-Seite (über Javascript) aus! - kein Backend o.ä
 >[!Important]
 >Serverseiteiger Code wird nicht benötigt, da die Berechnungsgrundlagen öffentlich dargelegt werden müssen.
-
-## :globe_with_meridians: Nginx rule
->[!Note]
->Auf dem Plesk wurde für https://steuerrechner.sh.ch/grundstueckgewinn/ eine Exception eingerichtet.
-
-## :abacus: Tarifberechnung
-
-
-### :microscope: Berechnung & Ranges/Limits 
-
 
 
 ## :paintbrush: Styling
@@ -81,7 +69,7 @@ Eingebunden sind folgende JS & Css Files:
 
 ### :ribbon: styles.css
 
-Einzig der overflow und wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
+Wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 
 ```css
 #shlogo {
