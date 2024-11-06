@@ -81,7 +81,7 @@ Eingebunden sind folgende JS & Css Files:
 
 ### :ribbon: styles.css
 
-Einzig der overflow und wenige attribute werden manuell mit der Datei [styles.css](styles.css) gesteuert:
+Einzig der overflow und wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 
 ```css
 #shlogo {
