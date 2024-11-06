@@ -1,0 +1,15 @@
+#shlogo {
+
+    position: absolute;
+    right: 0px;
+    height: 100px;
+
+}
+
+#navbar {
+    
+    height: 100px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(29,29,27,255) 33%, rgba(255,220,0,255) 20%);
+
+}

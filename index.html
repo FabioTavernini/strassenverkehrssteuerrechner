@@ -39,17 +39,32 @@
 
 <body>
 
+
+    <div id="navbar">
+        <a href="https://sh.ch" target="_blank">
+            <img id="shlogo" src="https://sh.ch/CMS/get/file/3bc0d433-fc31-4b52-97fa-d9ba3708587e?">
+        </a>
+    </div>
+
+
+
+
+
     <div class="text-center mt-5" id="title">
         <h1>Änderung der Strassenverkehrssteuern für leichte Motorwagen</h1>
         <p>gültig für Personenwagen, Lieferwagen, Kleinbusse, leichte Sattelmotorfahrzeuge und leichte Motorwagen</p>
     </div>
 
 
-    <form class="d-flex flex-column align-items-center mt-5">
+
+    <div class="d-flex flex-column align-items-center mt-5">
+
+
 
         <div class="form-group w-50">
 
-            <p class="font-weight-bold">Es sind alle Felder auszufüllen, wobei der Hubraum bei Fahrzeugen ohne Verbrennungsmotor (Elektro, Wasserstoff, …) mit 0 anzugeben ist.							
+            <p class="font-weight-bold">Es sind alle Felder auszufüllen, wobei der Hubraum bei Fahrzeugen ohne
+                Verbrennungsmotor (Elektro, Wasserstoff, …) mit 0 anzugeben ist.
             </p>
 
 
@@ -64,19 +79,18 @@
 
             <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne
                     Verbrennungsmotor</small></label>
-            <input class="form-control mb-4" type="number" name="marktdurchdringung" value="3.5"
-                id="marktdurchdringung" readonly>
+            <input class="form-control mb-4" type="number" name="marktdurchdringung" value="3.5" id="marktdurchdringung"
+                readonly>
 
             <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button>
 
         </div>
 
-    </form>
+    </div>
 
 
 
     <div class="d-flex flex-column align-items-center mt-5">
-
         <div class="form-group w-50">
 
             <label for="steuerbisher">Steuerbetrag Bisher</label>
@@ -86,7 +100,6 @@
             <input class="form-control mb-4" type="number" name="steuerneu" id="steuerneu" readonly>
 
         </div>
-
     </div>
 
 
@@ -94,12 +107,6 @@
 
 
     <script>
-
-        const submit = document.querySelector("form")
-
-        submit.addEventListener("submit", (e) => {
-            e.preventDefault();
-        })
 
 
 
