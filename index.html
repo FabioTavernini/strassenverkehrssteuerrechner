@@ -52,17 +52,17 @@
         <div class="form-group w-50">
 
             <label for="leergewicht">Leergewicht (kg) <small><br>Feld 30 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="leergewicht">
+            <input class="form-control mb-4" type="number" name="leergewicht" id="leergewicht">
 
             <label for="hubraum">Hubraum (cm3) <small><br>Feld 37 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="hubraum">
+            <input class="form-control mb-4" type="number" name="hubraum" id="hubraum">
 
-            <label for="hubraum">Leistung (kW) <small><br>Feld 76 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="hubraum">
+            <label for="leistung">Leistung (kW) <small><br>Feld 76 im Fahrzeugausweis</small></label>
+            <input class="form-control mb-4" type="number" name="leistung" id="leistung">
 
-
-            <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne Verbrennungsmotor</small></label>
-            <input class="form-control mb-4" type="number" name="marktdurchdringung">
+            <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne
+                    Verbrennungsmotor</small></label>
+            <input class="form-control mb-4" type="number" name="marktdurchdringung" value="3.5" id="marktdurchdringung">
 
             <button class="mt-4 btn btn-primary text-right-custom" onclick="">Berechnen</button>
 
@@ -72,6 +72,25 @@
 
 
     </form>
+
+
+
+    <div class="d-flex flex-column align-items-center mt-5">
+
+        <div class="form-group w-50">
+
+            <label for="steuerbisher">Steuerbetrag Bisher</label>
+            <input class="form-control mb-4" type="number" name="steuerbisher" id="steuerneu" disabled>
+
+            <label for="steuerneu">Steuerbetrag Bisher</label>
+            <input class="form-control mb-4" type="number" name="steuerneu" id="steuerneu" disabled>
+
+        </div>
+
+    </div>
+
+
+
 
 
 </body>
