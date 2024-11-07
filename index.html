@@ -109,7 +109,7 @@
             <label for="steuerbisher">Steuerbetrag Bisher</label>
             <input class="form-control mb-4" type="number" name="steuerbisher" id="steuerbisher" readonly>
 
-            <label for="steuerneu">Steuerbetrag Neu</label>
+            <label for="steuerneu" class="font-weight-bold">Steuerbetrag Neu</label>
             <input class="form-control mb-4" type="number" name="steuerneu" id="steuerneu" readonly>
 
         </div>
@@ -130,9 +130,11 @@
             let leistung = parseFloat(document.getElementById('leistung').value);
             let marktdurchdringung = parseFloat(document.getElementById('marktdurchdringung').value);
 
-            taxneu = calculatetax(leergewicht, hubraum, leistung, marktdurchdringung);
+            taxneu = calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung);
+            taxbisher = calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung);
 
             document.getElementById('steuerneu').value = taxneu;
+            document.getElementById('steuerbisher').value = taxbisher;
 
         }
 
