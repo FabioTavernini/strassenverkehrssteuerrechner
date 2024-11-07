@@ -27,7 +27,7 @@
     <script type="text/javascript" src="./script.js"></script>
     <link href="./style.css" rel="stylesheet">
 
-    <!-- <link rel="icon" href="https://sh.ch/CMS/get/file/a73b9867-9e21-4bb0-8b33-2b95b092284f"> -->
+    <link rel="icon" href="https://sh.ch/CMS/get/file/a73b9867-9e21-4bb0-8b33-2b95b092284f">
 
 </head>
 
@@ -35,7 +35,7 @@
 
     <div id="navbar">
         <a href="https://sh.ch" target="_blank">
-            <!-- <img id="shlogo" src="https://sh.ch/CMS/get/file/3bc0d433-fc31-4b52-97fa-d9ba3708587e?"> -->
+            <img id="shlogo" src="https://sh.ch/CMS/get/file/3bc0d433-fc31-4b52-97fa-d9ba3708587e?">
         </a>
     </div>
 
@@ -100,10 +100,10 @@
         <div class="form-group w-50">
 
             <label for="steuerbisher">Steuerbetrag Bisher</label>
-            <input class="form-control mb-4" type="number" name="steuerbisher" id="steuerbisher" readonly>
+            <input class="form-control mb-4" type="text" name="steuerbisher" id="steuerbisher" readonly>
 
             <label for="steuerneu" class="font-weight-bold">Steuerbetrag Neu</label>
-            <input class="form-control mb-4 font-weight-bold" type="number" name="steuerneu" id="steuerneu" readonly>
+            <input class="form-control mb-4 font-weight-bold" type="text" name="steuerneu" id="steuerneu" readonly>
 
         </div>
     </div>
@@ -120,8 +120,8 @@
             taxneu = calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung);
             taxbisher = calculatetaxbisher(hubraum);
 
-            document.getElementById('steuerneu').value = taxneu;
-            document.getElementById('steuerbisher').value = taxbisher;
+            document.getElementById('steuerneu').value = taxneu + " CHF";
+            document.getElementById('steuerbisher').value = taxbisher + " CHF";
 
         }
 
