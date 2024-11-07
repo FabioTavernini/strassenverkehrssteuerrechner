@@ -4,10 +4,10 @@
 [![Stellvertreter](https://img.shields.io/badge/Stellvertreter-LUKOE-blue)](https://teams.microsoft.com/l/chat/0/0?users=lucas.koeppli@itsh.ch)
 
 
-# :house: Strassenverkehrssteuer - Rechner :dollar:
+# :racing_car: Strassenverkehrssteuer - Rechner :dollar:
 Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen
 
-# :racing_car: Funktion
+#  Funktion
 Der Steuerrechner führt alle Berechnungen zur Steuer auf Client-Seite (über Javascript) aus! - kein Backend o.ä
 >[!Important]
 >Serverseiteiger Code wird nicht benötigt, da die Berechnungsgrundlagen öffentlich dargelegt werden müssen.
@@ -78,7 +78,7 @@ function calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung) 
 
 
 
-Die beiden Funktionen werden vom Button "" angestossen:
+Die beiden Funktionen werden vom Button ``` <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button> ``` angestossen:
 
 ``` js
 function berechnen() {
