@@ -35,7 +35,7 @@ function calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung) {
 
 }
 
-function calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung) {
+function calculatetaxbisher(hubraum) {
 
     // Alte Formel zur Steuerberechnung
     if (hubraum > 800) {

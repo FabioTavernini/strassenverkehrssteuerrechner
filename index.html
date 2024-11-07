@@ -118,7 +118,7 @@
             let marktdurchdringung = parseFloat(document.getElementById('marktdurchdringung').value);
 
             taxneu = calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung);
-            taxbisher = calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung);
+            taxbisher = calculatetaxbisher(hubraum);
 
             document.getElementById('steuerneu').value = taxneu;
             document.getElementById('steuerbisher').value = taxbisher;
