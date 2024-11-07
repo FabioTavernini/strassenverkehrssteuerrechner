@@ -31,7 +31,7 @@
     <script type="text/javascript" src="./script.js"></script>
     <link href="./style.css" rel="stylesheet">
 
-    <link rel="icon" href="https://sh.ch/CMS/get/file/a73b9867-9e21-4bb0-8b33-2b95b092284f">
+    <!-- <link rel="icon" href="https://sh.ch/CMS/get/file/a73b9867-9e21-4bb0-8b33-2b95b092284f"> -->
 
 </head>
 
@@ -42,7 +42,7 @@
 
     <div id="navbar">
         <a href="https://sh.ch" target="_blank">
-            <img id="shlogo" src="https://sh.ch/CMS/get/file/3bc0d433-fc31-4b52-97fa-d9ba3708587e?">
+            <!-- <img id="shlogo" src="https://sh.ch/CMS/get/file/3bc0d433-fc31-4b52-97fa-d9ba3708587e?"> -->
         </a>
     </div>
 
@@ -79,13 +79,26 @@
 
             <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne
                     Verbrennungsmotor</small></label>
-            <input class="form-control mb-4" type="number" name="marktdurchdringung" value="3.5" id="marktdurchdringung"
-                readonly>
+
+
+            <select class="form-control mb-4" name="marktdurchdringung" id="marktdurchdringung">
+                <option value="0">0%</option>
+                <option selected>3.5%</option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+                <option>60%</option>
+                <option>70%</option>
+                <option>80%</option>
+                <option>90%</option>
+                <option>100%</option>
+            </select>
 
             <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button>
 
         </div>
-
     </div>
 
 
@@ -112,13 +125,14 @@
 
         function berechnen() {
 
-            let leergewicht = document.getElementById('leergewicht').value;
-            let hubraum = document.getElementById('hubraum').value;
-            let leistung = document.getElementById('leistung').value;
-            let marktdurchdringung = document.getElementById('marktdurchdringung').value;
+            let leergewicht = parseFloat(document.getElementById('leergewicht').value);
+            let hubraum = parseFloat(document.getElementById('hubraum').value);
+            let leistung = parseFloat(document.getElementById('leistung').value);
+            let marktdurchdringung = parseFloat(document.getElementById('marktdurchdringung').value);
 
-            calculatetax(leergewicht, hubraum, leistung, marktdurchdringung);
+            taxneu = calculatetax(leergewicht, hubraum, leistung, marktdurchdringung);
 
+            document.getElementById('steuerneu').value = taxneu;
 
         }
 
