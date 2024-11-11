@@ -47,8 +47,7 @@
 
         <a class="fs-6 fs-md-4" target="_blank"
             href="https://sh.ch/CMS/get/file/dbe4fc8e-fb25-49ea-9904-3b6b886b1ee9">Verkehrssteuern Motorwagen bis 3500
-            kg
-            (Hubraumsteuer)
+            kg (Hubraumsteuer)
         </a>
 
         <br>
@@ -116,16 +115,20 @@
 
         function berechnen() {
 
-            let leergewicht = parseFloat(document.getElementById('leergewicht').value);
-            let hubraum = parseFloat(document.getElementById('hubraum').value);
-            let leistung = parseFloat(document.getElementById('leistung').value);
-            let marktdurchdringung = parseFloat(document.getElementById('marktdurchdringung').value);
+            let leergewicht = document.getElementById('leergewicht');
+            let hubraum = document.getElementById('hubraum');
+            let leistung = document.getElementById('leistung');
+            let marktdurchdringung = document.getElementById('marktdurchdringung');
 
-            taxneu = calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung);
-            taxbisher = calculatetaxbisher(hubraum);
+            if (leergewicht.reportValidity() && hubraum.reportValidity() && leistung.reportValidity() && marktdurchdringung.reportValidity()) {
 
-            document.getElementById('steuerneu').value = taxneu + " CHF";
-            document.getElementById('steuerbisher').value = taxbisher + " CHF";
+                taxneu = calculatetaxneu(parseFloat(leergewicht.value), parseFloat(hubraum.value), parseFloat(leistung.value), parseFloat(marktdurchdringung.value));
+                taxbisher = calculatetaxbisher(parseFloat(leergewicht.value), parseFloat(hubraum.value), parseFloat(leistung.value));
+
+                document.getElementById('steuerneu').value = taxneu;
+                document.getElementById('steuerbisher').value = taxbisher;
+
+            }
 
         }
 
