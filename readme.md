@@ -95,7 +95,6 @@ function berechnen() {
 }
 
 ```
-
 So werden die Felder "steuerneu" und "steuerbisher" befüllt.
 
 ## Styling :paintbrush:
@@ -157,6 +156,11 @@ Eingebunden sind folgende JS & Css Files:
 Wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 
 ```css
+body,html{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 #shlogo {
 
     position: absolute;
@@ -179,7 +183,7 @@ Wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 Mit folgenden Browsern wurde bereits getestet:
 
 - Opera (latest, Desktop)
-- Firefox (latest, mobile)
+- Firefox (latest, mobile, Samsung Galaxy S22 Ultra)
 - Ungoogled chromium (latest, Desktop)
 
 ## Kontakt & Support :email:
