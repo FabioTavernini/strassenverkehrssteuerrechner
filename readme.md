@@ -82,20 +82,25 @@ function calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung) 
 Die beiden Funktionen werden vom Button ``` <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button> ``` angestossen:
 
 ``` js
-function berechnen() {
+        function berechnen() {
 
-    let leergewicht = parseFloat(document.getElementById('leergewicht').value);
-    let hubraum = parseFloat(document.getElementById('hubraum').value);
-    let leistung = parseFloat(document.getElementById('leistung').value);
-    let marktdurchdringung = parseFloat(document.getElementById('marktdurchdringung').value);
+            let leergewicht = document.getElementById('leergewicht');
+            let hubraum = document.getElementById('hubraum');
+            let leistung = document.getElementById('leistung');
+            let marktdurchdringung = document.getElementById('marktdurchdringung');
 
-    taxneu = calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung);
-    taxbisher = calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung);
+            if (leergewicht.reportValidity() && hubraum.reportValidity() && leistung.reportValidity() && marktdurchdringung.reportValidity()) {
 
-    document.getElementById('steuerneu').value = taxneu;
-    document.getElementById('steuerbisher').value = taxbisher;
+                taxneu = calculatetaxneu(parseFloat(leergewicht.value), parseFloat(hubraum.value), parseFloat(leistung.value), parseFloat(marktdurchdringung.value));
+                taxbisher = calculatetaxbisher(parseFloat(leergewicht.value), parseFloat(hubraum.value), parseFloat(leistung.value));
 
-}
+                document.getElementById('steuerneu').value = taxneu;
+                document.getElementById('steuerbisher').value = taxbisher;
+
+            }
+
+        }
+
 
 ```
 So werden die Felder "steuerneu" und "steuerbisher" befüllt.
