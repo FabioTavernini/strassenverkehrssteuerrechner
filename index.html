@@ -42,15 +42,19 @@
     <div class="text-center mt-5" id="title">
         <h1 class="fs-3 fs-md-2">Änderung der Strassenverkehrssteuern für leichte Motorwagen</h1>
 
-        <p class="m-5">gültig für Personenwagen, Lieferwagen, Kleinbusse, leichte Sattelmotorfahrzeuge und leichte Motorwagen</p>
+        <p class="m-5">gültig für Personenwagen, Lieferwagen, Kleinbusse, leichte Sattelmotorfahrzeuge und leichte
+            Motorwagen</p>
 
-        <a class="fs-6 fs-md-4" target="_blank" href="https://sh.ch/CMS/get/file/dbe4fc8e-fb25-49ea-9904-3b6b886b1ee9">Verkehrssteuern Motorwagen bis 3500 kg
+        <a class="fs-6 fs-md-4" target="_blank"
+            href="https://sh.ch/CMS/get/file/dbe4fc8e-fb25-49ea-9904-3b6b886b1ee9">Verkehrssteuern Motorwagen bis 3500
+            kg
             (Hubraumsteuer)
         </a>
 
         <br>
 
-        <a class="fs-6 fs-md-4" target="_blank" href="https://sh.ch/CMS/get/file/99c12743-644c-4176-9dbc-e37dfba751b2">Verkehrssteuern Motorwagen mit
+        <a class="fs-6 fs-md-4" target="_blank"
+            href="https://sh.ch/CMS/get/file/99c12743-644c-4176-9dbc-e37dfba751b2">Verkehrssteuern Motorwagen mit
             Elektroantrieb ab 01.01.2018
         </a>
     </div>
@@ -65,19 +69,20 @@
 
 
             <label for="leergewicht">Leergewicht (kg) <small><br>Feld 30 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="leergewicht" id="leergewicht" required>
+            <input class="form-control mb-4" type="number" name="leergewicht" id="leergewicht" required
+                onchange="cleartax()">
 
             <label for="hubraum">Hubraum (cm3) <small><br>Feld 37 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="hubraum" id="hubraum" required>
+            <input class="form-control mb-4" type="number" name="hubraum" id="hubraum" required onchange="cleartax()">
 
             <label for="leistung">Leistung (kW) <small><br>Feld 76 im Fahrzeugausweis</small></label>
-            <input class="form-control mb-4" type="number" name="leistung" id="leistung" required>
+            <input class="form-control mb-4" type="number" name="leistung" id="leistung" required onchange="cleartax()">
 
             <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne
                     Verbrennungsmotor</small></label>
 
 
-            <select class="form-control mb-4" name="marktdurchdringung" id="marktdurchdringung">
+            <select class="form-control mb-4" name="marktdurchdringung" id="marktdurchdringung" onchange="cleartax()">
                 <option value="0">0%</option>
                 <option value="3.5" selected>3.5%</option>
                 <option value="10">10%</option>
@@ -123,6 +128,14 @@
 
             document.getElementById('steuerneu').value = taxneu + " CHF";
             document.getElementById('steuerbisher').value = taxbisher + " CHF";
+
+        }
+
+
+        function cleartax() {
+
+            document.getElementById('steuerneu').value = "";
+            document.getElementById('steuerbisher').value = "";
 
         }
 
