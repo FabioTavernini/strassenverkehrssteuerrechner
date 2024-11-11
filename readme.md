@@ -1,7 +1,6 @@
 
 # Verantwortlich
-[![Hauptverantwortlich](https://img.shields.io/badge/Verantwortlich-FTAVE-othercolor)](https://teams.microsoft.com/l/chat/0/0?users=fabio.tavernini@itsh.ch)
-[![Stellvertreter](https://img.shields.io/badge/Stellvertreter-LUKOE-blue)](https://teams.microsoft.com/l/chat/0/0?users=lucas.koeppli@itsh.ch)
+[![Hauptverantwortlich](https://img.shields.io/badge/Verantwortlich-FTAVE-othercolor)](https://teams.microsoft.com/l/chat/0/0?users=fabio.tavernini@itsh.ch) [![Stellvertreter](https://img.shields.io/badge/Stellvertreter-LUKOE-blue)](https://teams.microsoft.com/l/chat/0/0?users=lucas.koeppli@itsh.ch)
 
 
 # Strassenverkehrssteuer - Rechner :racing_car:
@@ -12,7 +11,7 @@ Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen - [https:
 
 #  Funktion
 Der Steuerrechner führt alle Berechnungen zur Steuer auf Client-Seite (über Javascript) aus! - kein Backend o.ä
->[!Important]
+>[!NOTE]
 >Serverseiteiger Code wird nicht benötigt, da die Berechnungsgrundlagen öffentlich dargelegt werden müssen.
 
 
