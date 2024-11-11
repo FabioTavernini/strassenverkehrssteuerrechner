@@ -1,10 +1,10 @@
 
-# Verantwortlichkeiten
+# Verantwortlich
 [![Hauptverantwortlich](https://img.shields.io/badge/Verantwortlich-FTAVE-othercolor)](https://teams.microsoft.com/l/chat/0/0?users=fabio.tavernini@itsh.ch)
 [![Stellvertreter](https://img.shields.io/badge/Stellvertreter-LUKOE-blue)](https://teams.microsoft.com/l/chat/0/0?users=lucas.koeppli@itsh.ch)
 
 
-# :racing_car: Strassenverkehrssteuer - Rechner :dollar:
+# Strassenverkehrssteuer - Rechner :racing_car:
 Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen
 
 #  Funktion
@@ -76,8 +76,6 @@ function calculatetaxbisher(leergewicht, hubraum, leistung, marktdurchdringung) 
 
 ```
 
-
-
 Die beiden Funktionen werden vom Button ``` <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button> ``` angestossen:
 
 ``` js
@@ -100,9 +98,7 @@ function berechnen() {
 
 So werden die Felder "steuerneu" und "steuerbisher" befüllt.
 
-
-
-## :paintbrush: Styling
+## Styling :paintbrush:
 Styling wird grösstenteils mit Bootstrap geregelt.
 Eingebunden sind folgende JS & Css Files:
 
@@ -156,7 +152,7 @@ Eingebunden sind folgende JS & Css Files:
 </li>
 </ul>
 
-### :ribbon: styles.css
+### styles.css :ribbon: 
 
 Wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 
@@ -179,17 +175,17 @@ Wenige attribute werden manuell mit der Datei [style.css](style.css) gesteuert:
 
 ```
 
-## :desktop_computer: Browser Support
+## Browser Support :desktop_computer: 
 Mit folgenden Browsern wurde bereits getestet:
 
-- Opera (latest version, Desktop version)
+- Opera (latest, Desktop)
+- Firefox (latest, mobile)
+- Ungoogled chromium (latest, Desktop)
 
-## :email: Kontakt & Support
+## Kontakt & Support :email:
 ### Strassenverkehrsamt
 - [Markus Storrer](mailto:markus.storrer@sh.ch)
-
 
 ### Informatik Schaffhausen
 - [Fabio Tavernini](mailto:Fabio.Tavernini@itsh.ch)
 - [Lucas Köppli](mailto:Lucas.Koeppli@itsh.ch)
-- [Marco Schirru](mailto:marco.schirru@itsh.ch)
