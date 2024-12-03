@@ -1,6 +1,6 @@
 function calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung) {
 
-    if(!leergewicht || !leistung){
+    if (!leergewicht || !leistung) {
         return "";
     }
 
@@ -34,7 +34,7 @@ function calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung) {
     // Steuer berechnen
     tax = (leergewicht * FaktorX) + (hubraum * FaktorY) + (leistung * FaktorZ);
 
-    if(tax <= 100){
+    if (tax <= 100) {
         tax = 100;
     }
 
@@ -45,18 +45,32 @@ function calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung) {
 
 function calculatetaxbisher(leergewicht, hubraum, leistung) {
 
-    if(!leergewicht || !leistung){
+    if (!leergewicht || !leistung) {
         return "";
     }
 
     // Alte Formel zur Steuerberechnung
-    if (hubraum > 800) {
-        tax = ((Math.ceil((hubraum - 800) / 100) * 12) + 120);
+    if (hubraum == 0) {
+        
+        if (leistung > 30) {
+            // rest von leistung - 30 -> /5 *3 + 120 mit runden
+            let result = Math.ceil((leistung - 30) / 5) * 3 + 120;
+            return result;
+        } else {
+            // Falls leistung weniger als 30
+            return 120;
+        }
+
     } else {
-        tax = 120;
+        
+        if (hubraum > 800) {
+            tax = ((Math.ceil((hubraum - 800) / 100) * 12) + 120);
+        } else {
+            tax = 120;
+        }
+
     }
 
     // Rückgabe des Wertes alte Steuer
     return Math.round(tax);
-
 }
