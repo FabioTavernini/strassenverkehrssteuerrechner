@@ -32,7 +32,11 @@ function calculatetaxneu(leergewicht, hubraum, leistung, marktdurchdringung) {
     const { FaktorX, FaktorY, FaktorZ } = row;
 
     // Steuer berechnen
-    const tax = (leergewicht * FaktorX) + (hubraum * FaktorY) + (leistung * FaktorZ);
+    tax = (leergewicht * FaktorX) + (hubraum * FaktorY) + (leistung * FaktorZ);
+
+    if(tax <= 100){
+        tax = 100;
+    }
 
     // Berechnete Steuer retournieren
     return Math.round(tax);
