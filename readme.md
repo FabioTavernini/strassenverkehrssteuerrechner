@@ -4,9 +4,9 @@
 
 
 # Strassenverkehrssteuer - Rechner :racing_car:
-Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen - [https://sh.ch/fileadmin/Redaktoren/STVA/steuerrechner/](https://sh.ch/fileadmin/Redaktoren/STVA/steuerrechner/)
+Ein Web-Rechner für die Strassenverkehrssteuer im Kanton Schaffhausen - [https://sh.ch/stva/steuerberechnung](https://sh.ch/stva/steuerberechnung)
 
-![https://sh.ch/fileadmin/Redaktoren/STVA/steuerrechner/](./docs/{3D7FF7C3-707F-4745-8819-3609AC256F09}.png)
+![https://sh.ch/stva/steuerberechnung](./docs/{3D7FF7C3-707F-4745-8819-3609AC256F09}.png)
 
 #  Funktion
 Der Steuerrechner führt alle Berechnungen zur Steuer auf Client-Seite (über Javascript) aus! - kein Backend o.ä
