@@ -45,12 +45,13 @@
     </div>
 
     <div class="text-center mt-5" id="title">
-        <h1 class="fs-3 fs-md-2">Änderung der Strassenverkehrssteuern für leichte Motorwagen</h1>
+        <h1 class="fs-3 fs-md-2">Änderung der Strassenverkehrssteuern für leichte Motorwagen<br/>
+        Berechnung der Steuerabgabe bei theoretischer Inkraftsetzung per 01.01.2025</h1>
 
         <p class="m-5">Gültig für Personenwagen, Lieferwagen, Kleinbusse, leichte Sattelmotorfahrzeuge und leichte
             Motorwagen</p>
 
-        <a title="Hubraumsteuer Motorwagen" rel="noopener" class="fs-6 fs-md-4" target="_blank"
+        <!-- <a title="Hubraumsteuer Motorwagen" rel="noopener" class="fs-6 fs-md-4" target="_blank"
             href="https://sh.ch/CMS/get/file/dbe4fc8e-fb25-49ea-9904-3b6b886b1ee9">Verkehrssteuern Motorwagen bis 3500
             kg (Hubraumsteuer)
         </a>
@@ -60,13 +61,13 @@
         <a title="Verkehrssteuern Elektroantrieb" rel="noopener" class="fs-6 fs-md-4" target="_blank"
             href="https://sh.ch/CMS/get/file/99c12743-644c-4176-9dbc-e37dfba751b2">Verkehrssteuern Motorwagen mit
             Elektroantrieb ab 01.01.2018
-        </a>
+        </a> -->
     </div>
 
     <div class="d-flex flex-column align-items-center mt-5">
 
         <div class="form-group col-10 col-md-6">
-
+            <h2 class="fs-3 fs-md-2">Eingabe Fahrzeugdaten aus Fahrzeugausweis</h2>
             <p class="font-weight-bold">Es sind alle Felder auszufüllen, wobei der Hubraum bei Fahrzeugen ohne
                 Verbrennungsmotor (Elektro, Wasserstoff, …) mit 0 anzugeben ist.
             </p>
@@ -81,8 +82,11 @@
             <label for="leistung">Leistung (kW) <small><br>Feld 76 im Fahrzeugausweis</small></label>
             <input class="form-control mb-4" type="number" name="leistung" id="leistung" required onchange="cleartax()">
 
-            <label for="marktdurchdringung">Marktdurchdringung (%)<small><br> Marktdurchdringung Fahrzeuge ohne
-                    Verbrennungsmotor</small></label>
+            <h3 class="h3">Eingabe optional</h3>
+            <p class="font-weight-bold">Entwicklung der Steuerabgabe bei zunehmender Elektromobilität (Zukunftsszenatio)</p>
+            
+            <label for="marktdurchdringung">Marktdurchdringung Fahrzeuge ohne Verbrennungsmotor (%)
+                <small><br>Default = 3.5% (Stand 30.09.2024)</small></label>
 
             <select class="form-control mb-4" name="marktdurchdringung" id="marktdurchdringung" onchange="cleartax()">
                 <option value="0">0%</option>
@@ -98,7 +102,7 @@
                 <option value="90">90%</option>
                 <option value="100">100%</option>
             </select>
-
+            <p>Bei Zukunftsszenarien ist mit geringfügigen Abweichungen zu rechnen!</p>
             <button class="mt-4 btn btn-primary text-right-custom" onclick="berechnen()">Berechnen</button>
 
         </div>
@@ -107,10 +111,10 @@
     <div class="d-flex flex-column align-items-center mt-5">
         <div class="form-group col-10 col-md-6">
 
-            <label for="steuerbisher">Steuerbetrag Bisher</label>
+            <label for="steuerbisher">Steuerbetrag Bisher (CHF pro Jahr)</label>
             <input class="form-control mb-4" type="text" name="steuerbisher" id="steuerbisher" readonly>
 
-            <label for="steuerneu" class="font-weight-bold">Steuerbetrag Neu</label>
+            <label for="steuerneu" class="font-weight-bold">Steuerbetrag Neu (CHF pro Jahr)</label>
             <input class="form-control mb-4 font-weight-bold" type="text" name="steuerneu" id="steuerneu" readonly>
 
         </div>
